@@ -1,0 +1,105 @@
+---
+import Navbar from "../../components/Navbar/Navbar.astro";
+---
+
+<div class="container">
+  <Navbar />
+  <header class="header-content">
+    <div class="content-rigth">
+      <h1 class="content-title">Backend Dev</h1>
+      <p class="content-text">
+        Hey! <b class="text-br">I’m Joseph</b>. I mostly work as a backend
+        developer, but I’ve got a soft spot for frontend too—I really enjoy
+        dabbling in both worlds. Always up for exploring new things and learning
+        along the way!
+      </p>
+
+      <div class="content-action">
+        <button class="button-download">Download CV !!</button>
+      </div>
+    </div>
+
+    <div class="content-left">
+      <img class="content-image" src="iamgen.png" />
+    </div>
+  </header>
+</div>
+
+<style>
+  .container {
+    padding: 1rem 3rem;
+  }
+
+  .header-content {
+    display: flex;
+  }
+  .content-rigth {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    flex: 1;
+  }
+
+  .content-left {
+    display: flex;
+    justify-content: end;
+    flex: 1;
+  }
+  .content-image {
+    max-width: 450px;
+    max-height: 400px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .content-text {
+    line-height: 1.2;
+    margin-top: 30px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .content-action {
+    text-align: end;
+    flex: auto;
+  }
+
+  .button-download {
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 30px 20px;
+    font-family: inherit;
+    background: url("resaltar.png") no-repeat center; /* Imagen de fondo ajustada */
+    background-size: contain;
+  }
+
+  .text-br {
+    font-weight: 500;
+    border-bottom: 1px solid #775ada;
+    color: white;
+  }
+
+  @media (min-width: 1000px) {
+    .container {
+      padding: 1rem 7rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem 3rem;
+    }
+
+    .header-content {
+      flex-direction: column;
+    }
+
+    .content-image {
+      display: flex;
+      width: 100%;
+      height: 100%;
+    }
+  }
+</style>

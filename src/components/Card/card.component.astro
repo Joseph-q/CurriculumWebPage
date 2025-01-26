@@ -1,0 +1,54 @@
+<div class="card">
+     <img src="Barber.png">
+     <div>
+         <h4 class="title">School Proyect</h4>
+        <div class="card-badge">Angular, TypeScript, Golang, Sqlite, AWS</div>
+     </div>
+</div>
+
+<style>
+     .card {
+            background-color: #09192b; /* Fondo oscuro para la carta */
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra más prominente */
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Imagen dentro de la carta */
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Contenedor del texto */
+        .card div {
+            padding: 20px;
+        }
+
+        /* Título */
+        .title {
+            font-size: 1.5rem;
+            color: #e1e1e1; /* Blanco suave para el título */
+            margin: 0;
+        }
+
+        /* Tecnologías en badge */
+        .card-badge {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #ffffff; /* Blanco para el texto del badge */
+            background-color: #191f2b; /* Fondo gris azulado */
+            padding: 5px 10px;
+            border-radius: 20px;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+</style>

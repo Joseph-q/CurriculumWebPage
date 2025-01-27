@@ -1,0 +1,75 @@
+---
+import Badge from "../components/Badge.astro";
+import { getContent } from "../translations/translations";
+
+const content = getContent(Astro.url.pathname);
+---
+
+<section class="skills" id="skills">
+  <h2>{content.Skills.title}</h2>
+
+  <div class="skills-container">
+    <Badge title=".NET" alt=".NET Logo" url="svg/Microsoft_.NET_logo.svg" />
+    <Badge title="NestJS" alt="NestJS Logo" url="svg/NestJS.svg" />
+    <Badge title="Angular" alt="Angular logo" url="svg/angular-logo.svg" />
+    <Badge title="React" alt="React Logo" url="svg/React-logo.svg" />
+    <Badge
+      title="Astro"
+      alt="Astro Logo"
+      url="svg/astro-icon-light-gradient.svg"
+    />
+  </div>
+
+  <div class="skills-container">
+    <Badge title="C#" alt="Csharp Logo" url="svg/Csharp.svg" />
+
+    <Badge
+      title="TypeScript"
+      alt="TypeScript Logo"
+      url="svg/Typescript_logo_2020.svg"
+    />
+    <Badge title="Node Js" alt="Node Logo" url="svg/nodejs-icon.svg" />
+    <Badge title="Go (Golang)" alt="Go Logo" url="svg/Go-Logo_Blue.svg" />
+  </div>
+
+  <div class="skills-container">
+    <Badge
+      title="Postgresql"
+      alt="Postgresql_elephant"
+      url="svg/Postgresql_elephant.svg"
+    />
+    <Badge
+    title="AWS"
+    alt="Amazon Web Services Logo"
+    url="svg/Amazon_Web_Services_Logo.svg"
+  />
+    <Badge
+      title="Sql Server"
+      alt="Sql Server logo"
+      url="svg/microsoft-sql-server.svg"
+    />
+  </div>
+
+  <style>
+    .skills {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px 0;
+      gap: 2.5rem;
+    }
+
+    .skills h2 {
+      margin-bottom: 1rem;
+    }
+
+    .skills-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  </style>
+</section>

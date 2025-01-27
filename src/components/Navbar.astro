@@ -1,4 +1,39 @@
-a {
+---
+import { getContent } from "../translations/translations";
+
+const content = getContent(Astro.url.pathname)
+---
+
+<script>
+  const mobileMenu = document.getElementById("mobile-menu");
+  const navList = document.querySelector(".nav-list");
+  
+  if (mobileMenu != null && navList != null) {
+    mobileMenu.addEventListener("click", () => {
+      navList.classList.toggle("active");
+    });
+  }
+</script>
+
+<nav class="navbar">
+  <h6 class="logo">{content.NavBar.logo}</h6>
+
+  <div class="menu-toggle" id="mobile-menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+
+  <ul class="nav-list">
+    <li><a href="#about">{content.NavBar.links[0]}</a></li>
+    <li><a href="#proyects">{content.NavBar.links[1]}</a></li>
+    <li><a href="#skills">{content.NavBar.links[2]}</a></li>
+    <li><a href="#contact">{content.NavBar.links[3]}</a></li>
+  </ul>
+</nav>
+
+<style>
+  a {
     color: white;
     text-decoration: none;
     transition:
@@ -97,3 +132,4 @@ a {
       font-size: 1.5rem;
     }
   }
+</style>

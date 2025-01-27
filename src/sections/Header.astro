@@ -1,27 +1,25 @@
 ---
-import Navbar from "../../components/Navbar/Navbar.astro";
+import Navbar from "../components/Navbar.astro";
+import { getContent } from "../translations/translations";
+
+const content = getContent(Astro.url.pathname);
 ---
 
-<div class="container">
+<div class="container" id="about">
   <Navbar />
   <div class="container-header">
     <header class="header-content">
       <div class="content-rigth">
-        <h1 class="content-title">Backend Dev</h1>
-        <p class="content-text">
-          Hey! <b class="text-br">I’m Joseph</b>. I mostly work as a backend
-          developer, but I’ve got a soft spot for frontend too—I really enjoy
-          dabbling in both worlds. Always up for exploring new things and
-          learning along the way!
-        </p>
+        <h1 class="content-title">{content.Header.title}</h1>
+        <p class="content-text" set:html={content.Header.text} />
 
         <div class="content-action">
-          <button class="button-download">Download CV !!</button>
+          <button class="button-download">{content.Header.button}</button>
         </div>
       </div>
 
       <div class="content-left">
-        <img class="content-image" src="iamgen.png" />
+        <img class="content-image" src="img/header-image.png" />
       </div>
     </header>
   </div>
@@ -70,21 +68,28 @@ import Navbar from "../../components/Navbar/Navbar.astro";
   }
 
   .button-download {
+    position: relative;
     border: none;
     cursor: pointer;
+    background: none;
     color: white;
     font-size: 1rem;
     font-weight: 500;
-    padding: 30px 20px;
     font-family: inherit;
-    background: url("resaltar.png") no-repeat center; /* Imagen de fondo ajustada */
-    background-size: contain;
+    padding: 10px 20px; /* Añadido relleno de ejemplo */
   }
 
-  .text-br {
-    font-weight: 500;
-    border-bottom: 1px solid #775ada;
-    color: white;
+  .button-download::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url("svg/highlight.svg") no-repeat center;
+    transform: rotate(-15deg); /* Puedes añadir la rotación aquí */
+    transform-origin: center center;
+    z-index: -1; /* Asegura que el fondo esté debajo del contenido */
   }
 
   @media (min-width: 1000px) {

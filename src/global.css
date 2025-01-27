@@ -3,7 +3,11 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+.highlight {
+  font-weight: 500;
+  border-bottom: 1px solid #775ada;
+  color: white;
+}
 
 @font-face {
   font-family: "VT323";

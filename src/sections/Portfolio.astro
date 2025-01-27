@@ -1,14 +1,17 @@
 ---
-import  CardComponent from '../../components/Card/card.component.astro'
+import Card from "../components/Card.astro";
+import { getContent } from "../translations/translations";
+
+const content = getContent(Astro.url.pathname)
 ---
 
-<section class="container">
-    <h2>Proyects</h2>
+<section class="container" id="proyects">
+    <h2>{content.Proyects.title}</h2>
 
     <div class="car-container">
-        <CardComponent></CardComponent>
-        <CardComponent></CardComponent>
-        <CardComponent></CardComponent>
+        <Card title="Course Manager" description="Angular, TypeScript, Golang, Sqlite, AWS" url="img/school-proyect.mp4"/>
+
+        <Card title="Barber Page" description="Astro, Typescript, HTML, CSS" url="img/barber-proyect.webp"/>
     </div>
 
 </section>

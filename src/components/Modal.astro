@@ -1,0 +1,38 @@
+<script>
+  // Obtener elementos
+  const modal = document.getElementById("Modal");
+  const button = document.getElementById("close");
+
+  if (modal && button) {
+    button.onclick = function () {
+      modal.style.display = "none";
+    };
+
+    // Cerrar el modal cuando se hace clic fuera del contenido del modal
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+  }
+</script>
+<!-- Modal -->
+<div
+  id="Modal"
+  class="modal fixed z-10 left-0 top-0 w-full h-full bg-black/50 flex justify-center items-center"
+>
+  <div
+    class="relative bg-[rgba(17,35,54,0.9)] border border-gray-500 w-4/5 p-5"
+  >
+    <button
+      id="close"
+      class="absolute top-5 right-5 text-2xl font-bold text-gray-700 hover:text-red-600
+      cursor-pointer"
+    >
+      &times;
+    </button>
+    <div class="flex items-start gap-5 h-[70vh]">
+     <slot></slot>
+    </div>
+  </div>
+</div>

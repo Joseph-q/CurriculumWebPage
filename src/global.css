@@ -1,9 +1,7 @@
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-.highlight {
+@import "tailwindcss";
+
+
+b {
   font-weight: 500;
   border-bottom: 1px solid #775ada;
   color: white;

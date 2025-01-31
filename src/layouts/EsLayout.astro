@@ -1,6 +1,4 @@
 ---
-import "../global.css";
-
 const title = "Joseph-q";
 ---
 
@@ -11,9 +9,14 @@ const title = "Joseph-q";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="/styles/global.css" />
     <title>{title}</title>
   </head>
   <body>
     <slot />
   </body>
 </html>
+
+<style is:global>
+  @import "tailwindcss";
+</style>

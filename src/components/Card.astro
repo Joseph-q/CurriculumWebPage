@@ -1,4 +1,6 @@
 ---
+import Modal from "./Modal.astro";
+
 interface Props {
   url: string;
   title: string;
@@ -7,23 +9,28 @@ interface Props {
 
 const { url, title, description } = Astro.props;
 
-const isVideo = url.endsWith(".mp4") || url.endsWith(".webm") || url.endsWith(".mov");
-
+const isVideo =
+  url.endsWith(".mp4") || url.endsWith(".webm") || url.endsWith(".mov");
 ---
 
 <div class="card">
-  {isVideo ? (
-    <video  loop autoplay muted>
-      <source src={url} type="video/mp4" />
-      Tu navegador no soporta la etiqueta de video.
-    </video>
-  ) : (
-    <img src={url} alt={title} />
-  )}  <div>
+  {
+    isVideo ? (
+      <video loop autoplay muted>
+        <source src={url} type="video/mp4" />
+        Tu navegador no soporta la etiqueta de video.
+      </video>
+    ) : (
+      <img src={url} alt={title} />
+    )
+  }
+  <div>
     <h4 class="title">{title}</h4>
     <div class="card-badge">{description}</div>
   </div>
 </div>
+
+
 
 <style>
   .card {
@@ -48,12 +55,10 @@ const isVideo = url.endsWith(".mp4") || url.endsWith(".webm") || url.endsWith(".
   }
 
   .card video {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
 
   /* Contenedor del texto */
   .card div {

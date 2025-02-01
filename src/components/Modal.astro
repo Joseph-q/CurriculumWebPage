@@ -1,5 +1,4 @@
 <script>
-  // Obtener elementos
   const modal = document.getElementById("Modal");
   const button = document.getElementById("close");
 
@@ -16,6 +15,7 @@
     };
   }
 </script>
+
 <!-- Modal -->
 <div
   id="Modal"
@@ -32,7 +32,7 @@
       &times;
     </button>
     <div class="flex items-start gap-5 h-[70vh]">
-     <slot></slot>
+      <slot />
     </div>
   </div>
 </div>

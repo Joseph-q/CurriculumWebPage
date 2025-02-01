@@ -6,9 +6,8 @@ interface Props {
 }
 export default function Badge({ url, alt, title, width }: Props) {
   return (
-    <div class="flex flex-col items-center w-fit">
-      <img src={url} alt={alt} class="mb-2" width={width ?? "50px"} />
-      <p class="text-lg m-0">{title}</p>
+    <div class="flex flex-col items-center w-fit justify-center">
+      <img src={url} alt={alt} class="mb-2" width={width ?? "50px"} height="100%" />
     </div>
   );
 }

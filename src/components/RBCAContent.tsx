@@ -1,16 +1,15 @@
 import ModalContent from "./ModalContent";
 
-export default function BarberContent() {
+export default function RBCAContent() {
   return (
     <ModalContent
-      title="Barber Page"
-      cover="img/barber-proyect.webp"
+      title="RBCA Api"
+      cover="svg/DbDiagram-RBCA.svg"
       link="https://github.com/"
       badges={[
-        "Astro.svg",
-        "TypeScript.svg",
-        "HTML.svg",
-        "CSS3.svg",
+        "Net.svg",
+        "SqlServer.svg",
+        "Csharp.svg",
       ]}
     >
       <p>

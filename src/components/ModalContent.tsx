@@ -3,26 +3,39 @@ import Badge from "./Badge";
 
 interface ModalProps {
   title: string;
-  img: string;
+  cover: string;
   link: string;
   badges: string[];
   children: ComponentChildren;
 }
 
 export default function ModalContent({
-  img,
+  cover,
   badges,
   link,
   title,
   children,
 }: ModalProps) {
+  const isVideo =
+    cover.endsWith(".mp4") || cover.endsWith(".webm") || cover.endsWith(".mov");
+
   return (
     <>
       <div class="flex flex-1 max-w-lg flex-col h-full justify-center">
-        <img src={"img/" + img} alt="" />
+        {isVideo ? (
+          <video loop controls muted>
+            <source src={cover} type="video/mp4" />
+            Tu navegador no soporta la etiqueta de video.
+          </video>
+        ) : (
+          <img
+            src={cover}
+            alt={title}
+          />
+        )}
         <div class="w-full flex gap-5 justify-center mt-5">
           {badges.map((v) => (
-            <Badge url={"svg/" + v} width="35"/>
+            <Badge url={"svg/" + v} width="45" />
           ))}
         </div>
       </div>

@@ -3,17 +3,19 @@ import Card from "../components/Card.tsx";
 import { getContent } from "../translations/translations.ts";
 import Modal from "../components/Modal.tsx";
 import BarberContent from "../components/BarberContent.tsx";
+import CourseContent from "../components/CourseContent.tsx";
+import RBCAContent from "../components/RBCAContent.tsx";
 
 export default function Portfolio() {
   const [isOpen, setIsOpen] = useState(false);
   const [modalContent, setModalContent] = useState<any>(null);
 
   // Si estás en el cliente, window está definido
-  const pathname = typeof window !== "undefined" ? window.location.pathname : "/";
+  const pathname =
+    typeof window !== "undefined" ? window.location.pathname : "/";
   const content = getContent(pathname);
 
   const openModal = (content: any) => {
-    console.log("Abriendo modal");
     setModalContent(content);
     setIsOpen(true);
   };
@@ -34,11 +36,13 @@ export default function Portfolio() {
             title="Course Manager"
             description="Angular, TypeScript, Golang, Sqlite, AWS"
             url="img/school-proyect.mp4"
+            onClick={() => openModal(<CourseContent />)}
           />
           <Card
             title="RBCA API"
             description=".NET, SQL SERVER, Entity Framework"
             url="svg/DbDiagram-RBCA.svg"
+            onClick={() => openModal(<RBCAContent />)}
           />
         </div>
       </section>

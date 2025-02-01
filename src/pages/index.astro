@@ -2,13 +2,13 @@
 import Layout from "../layouts/Layout.astro";
 import Footer from "../sections/Footer.astro";
 import Header from "../sections/Header.astro";
-import Portfolio from "../sections/Portfolio.astro";
+import Portfolio from "../sections/Portfolio";
 import Skills from "../sections/Skills.astro";
 ---
 
 <Layout>
   <Header />
-  <Portfolio />
+  <Portfolio client:load></Portfolio>
   <Skills />
   <Footer />
 </Layout>

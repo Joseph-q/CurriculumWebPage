@@ -1,23 +1,19 @@
+import { getContent } from "../translations/translations";
 import ModalContent from "./ModalContent";
 
 export default function RBCAContent() {
+  const pathname =
+    typeof window !== "undefined" ? window.location.pathname : "/";
+  const content = getContent(pathname).Modal.RBCAContent.content;
+
   return (
     <ModalContent
       title="RBCA Api"
       cover="/svg/DbDiagram-RBCA.svg"
-      link="https://github.com/Joseph-q/RBCA"
-      badges={[
-        "Net.svg",
-        "SqlServer.svg",
-        "Csharp.svg",
-      ]}
+      gitHublink="https://github.com/Joseph-q/RBCA"
+      badges={["Net.svg", "SqlServer.svg", "Csharp.svg"]}
     >
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam
-        deleniti maxime quod dolores! Nobis assumenda architecto ad voluptas
-        vitae, dolores ullam, dolore nisi laudantium quo iste ea deserunt
-        delectus laborum.
-      </p>
+      <div dangerouslySetInnerHTML={{ __html: content }}></div>
     </ModalContent>
   );
 }

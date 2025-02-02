@@ -23,7 +23,7 @@ export default function ModalContent({
 
   return (
     <>
-      <div class="flex flex-1 max-w-lg flex-col h-full justify-center">
+      <div className="flex flex-1 max-w-lg flex-col justify-center">
         {isVideo ? (
           <video loop controls muted>
             <source src={cover} type="video/mp4" />
@@ -32,24 +32,26 @@ export default function ModalContent({
         ) : (
           <img src={cover} alt={title} />
         )}
-        <div class="w-full flex gap-5 justify-center mt-5">
+        <div className="w-full flex gap-5 justify-center mt-5">
           {badges.map((v) => (
             <Badge url={"/svg/" + v} width="45" />
           ))}
         </div>
       </div>
-      <div class="flex flex-1 flex-col h-full justify-between">
-        <div>
-          <h3 class="text-xl font-semibold">{title}</h3>
-          {children}
+      <div className="flex flex-1 flex-col justify-between h-[45vh] md:h-full">
+        <div className="overflow-scroll  h-full">
+          <div className="flex flex-col ">
+            <h3 className="flex-1 text-xl font-semibold">{title}</h3>
+            {children}
+          </div>
         </div>
 
-        <div class="flex mt-3 justify-end gap-10">
+        <div className="flex w-full gap-10 justify-end">
           {gitHublink ? (
             <a
               href={gitHublink}
               target="_blank"
-              class="relative text-white text-lg no-underline transition-colors duration-200 ease-in-out hover:text-[#775ada] 
+              className="relative text-white text-lg no-underline transition-colors duration-200 ease-in-out hover:text-[#775ada] 
             after:absolute after:left-0 after:bottom-[-3px] 
             after:w-0 after:h-[2px] after:bg-[#775ada] 
             after:transition-all after:duration-300 
@@ -64,7 +66,7 @@ export default function ModalContent({
           {blogLink ? (
             <a
               href={blogLink}
-              class=" relative text-[#775ada] text-lg after:absolute 
+              className=" relative text-[#775ada] text-lg after:absolute 
             after:bottom-[-3px] 
             after:w-full
             after:left-0

@@ -1,4 +1,5 @@
 import { type ComponentChildren } from "preact";
+import { useEffect } from "preact/hooks";
 
 interface ModalProps {
   isOpen: boolean;
@@ -7,7 +8,22 @@ interface ModalProps {
 }
 
 export default function Modal({ isOpen, onClose, children }: ModalProps) {
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isOpen]);
+
+
   if (!isOpen) return null;
+
+
   return (
     <div
       id="modal"
@@ -23,7 +39,7 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
         >
           &times;
         </button>
-        <div className="flex flex-col items-start gap-5 h-auto mt-10 md:mt-0 md:flex-row md:h-[70vh]">
+        <div className="flex flex-col max-h-[80vh]  items-start gap-5 h-auto mt-10 md:mt-0 md:flex-row md:h-[70vh]">
           {children}
         </div>
       </div>

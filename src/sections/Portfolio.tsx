@@ -29,13 +29,13 @@ export default function Portfolio() {
           <Card
             title="Barber Page"
             description="Astro, Typescript, HTML, CSS"
-            url="img/barber-proyect.webp"
+            url="/img/barber-proyect.webp"
             onClick={() => openModal(<BarberContent />)}
           />
           <Card
             title="Course Manager"
             description="Angular, TypeScript, Golang, Sqlite, AWS"
-            url="img/school-proyect.mp4"
+            url="/img/school-proyect.mp4"
             onClick={() => openModal(<CourseContent />)}
           />
           <Card

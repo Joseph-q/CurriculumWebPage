@@ -6,5 +6,5 @@ import preact from "@astrojs/preact";
 export default defineConfig({
   vite: { plugins: [tailwindcss()] },
   integrations: [preact()],
-  site: "https://joseph-q.github.io/CurriculumWebPage/",
+  site: "https://juseph.dev",
 });

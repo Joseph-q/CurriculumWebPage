@@ -41,7 +41,7 @@ export default function Portfolio() {
           <Card
             title="RBCA API"
             description=".NET, SQL SERVER, Entity Framework"
-            url="svg/DbDiagram-RBCA.svg"
+            url="/svg/DbDiagram-RBCA.svg"
             onClick={() => openModal(<RBCAContent />)}
           />
         </div>

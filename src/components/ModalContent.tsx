@@ -35,7 +35,7 @@ export default function ModalContent({
         )}
         <div class="w-full flex gap-5 justify-center mt-5">
           {badges.map((v) => (
-            <Badge url={"svg/" + v} width="45" />
+            <Badge url={"/svg/" + v} width="45" />
           ))}
         </div>
       </div>

@@ -4,7 +4,7 @@ export default function BarberContent() {
   return (
     <ModalContent
       title="Barber Page"
-      cover="img/barber-proyect.webp"
+      cover="/img/barber-proyect.webp"
       link="https://github.com/"
       badges={[
         "Astro.svg",

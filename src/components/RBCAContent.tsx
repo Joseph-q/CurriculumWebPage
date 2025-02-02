@@ -4,7 +4,7 @@ export default function RBCAContent() {
   return (
     <ModalContent
       title="RBCA Api"
-      cover="svg/DbDiagram-RBCA.svg"
+      cover="/svg/DbDiagram-RBCA.svg"
       link="https://github.com/"
       badges={[
         "Net.svg",

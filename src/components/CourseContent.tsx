@@ -4,7 +4,7 @@ export default function CourseContent() {
   return (
     <ModalContent
       title="Courser Administrator"
-      cover="img/school-proyect.mp4"
+      cover="/img/school-proyect.mp4"
       link="https://github.com/"
       badges={[
         "Golang.svg",

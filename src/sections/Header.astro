@@ -14,7 +14,7 @@ const content = getContent(Astro.url.pathname);
         <p class="content-text" set:html={content.Header.text} />
 
         <div class="content-action">
-          <button class="button-download">{content.Header.button}</button>
+          <button class="button-download highlight">{content.Header.button}</button>
         </div>
       </div>
 
@@ -79,18 +79,7 @@ const content = getContent(Astro.url.pathname);
     padding: 10px 20px; /* Añadido relleno de ejemplo */
   }
 
-  .button-download::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: url("svg/highlight.svg") no-repeat center;
-    transform: rotate(-15deg); /* Puedes añadir la rotación aquí */
-    transform-origin: center center;
-    z-index: -1; /* Asegura que el fondo esté debajo del contenido */
-  }
+  
 
   @media (min-width: 1000px) {
     .container {

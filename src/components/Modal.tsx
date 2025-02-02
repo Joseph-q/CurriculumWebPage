@@ -23,7 +23,7 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
         >
           &times;
         </button>
-        <div className="flex flex-col items-start gap-5 h-auto md:flex-row md:h-[70vh]">
+        <div className="flex flex-col items-start gap-5 h-auto mt-10 md:mt-0 md:flex-row md:h-[70vh]">
           {children}
         </div>
       </div>

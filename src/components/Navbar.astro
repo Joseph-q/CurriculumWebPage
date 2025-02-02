@@ -1,16 +1,23 @@
 ---
 import { getContent } from "../translations/translations";
 
-const content = getContent(Astro.url.pathname)
+const content = getContent(Astro.url.pathname);
 ---
 
 <script>
   const mobileMenu = document.getElementById("mobile-menu");
   const navList = document.querySelector(".nav-list");
-  
+  const navLinks = document.querySelectorAll(".nav-list a");
+
   if (mobileMenu != null && navList != null) {
     mobileMenu.addEventListener("click", () => {
       navList.classList.toggle("active");
+    });
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        navList.classList.toggle("active");
+      });
     });
   }
 </script>

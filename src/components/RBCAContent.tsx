@@ -5,7 +5,7 @@ export default function RBCAContent() {
     <ModalContent
       title="RBCA Api"
       cover="/svg/DbDiagram-RBCA.svg"
-      link="https://github.com/"
+      link="https://github.com/Joseph-q/RBCA"
       badges={[
         "Net.svg",
         "SqlServer.svg",

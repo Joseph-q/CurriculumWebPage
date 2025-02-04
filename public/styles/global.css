@@ -75,7 +75,7 @@ h6 {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #012146; /* Color de la barra de desplazamiento */
+  background-color: #775ada; /* Color de la barra de desplazamiento */
   border-radius: 10px; /* Bordes redondeados */
   border: 2px solid #09192b; /* Borde alrededor de la barra */
 }

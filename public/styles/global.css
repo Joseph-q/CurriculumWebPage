@@ -63,3 +63,19 @@ h6 {
   transform-origin: center center;
   z-index: -1; /* Asegura que el fondo esté debajo del contenido */
 }
+
+
+/* Estilos para la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 6px; /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-track {
+  background: #09192b; /* Color del fondo de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #012146; /* Color de la barra de desplazamiento */
+  border-radius: 10px; /* Bordes redondeados */
+  border: 2px solid #09192b; /* Borde alrededor de la barra */
+}

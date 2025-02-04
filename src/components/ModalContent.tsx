@@ -39,8 +39,8 @@ export default function ModalContent({
         </div>
       </div>
       <div className="flex flex-1 flex-col justify-between h-[45vh] md:h-full">
-        <div className="overflow-scroll  h-full">
-          <div className="flex flex-col ">
+      <div className="overflow-y-auto h-full">
+      <div className="flex flex-col ">
             <h3 className="flex-1 text-xl font-semibold">{title}</h3>
             {children}
           </div>

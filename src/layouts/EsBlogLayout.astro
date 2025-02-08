@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <title>Blog</title>
+  </head>
+  <body class="max-w-3xl mx-auto py-10 px-5">
+    <a href="/es" class="flex items-center text-indigo-500 hover:underline">
+      <svg
+        class="w-5 h-5 mr-2"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"
+        ></path>
+      </svg>
+      Back
+    </a>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  @import "tailwindcss";
+</style>

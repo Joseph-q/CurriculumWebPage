@@ -38,7 +38,7 @@ export default function Portfolio() {
             onClick={() => openModal(<CourseContent />)}
           />
           <Card
-            title="RBCA API"
+            title="RBAC API"
             description=".NET, SQL SERVER, Entity Framework"
             url="/svg/DbDiagram-RBCA.svg"
             onClick={() => openModal(<RBCAContent />)}

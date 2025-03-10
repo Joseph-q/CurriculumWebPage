@@ -8,6 +8,7 @@ interface ModalProps {
   blogLink?: string;
   badges: string[];
   children: ComponentChildren;
+  link?: string;
 }
 
 export default function ModalContent({
@@ -17,6 +18,7 @@ export default function ModalContent({
   blogLink,
   title,
   children,
+  link,
 }: ModalProps) {
   const isVideo =
     cover.endsWith(".mp4") || cover.endsWith(".webm") || cover.endsWith(".mov");
@@ -39,8 +41,8 @@ export default function ModalContent({
         </div>
       </div>
       <div className="flex flex-1 flex-col justify-between h-[45vh] md:h-full">
-      <div className="overflow-y-auto h-full">
-      <div className="flex flex-col ">
+        <div className="overflow-y-auto h-full">
+          <div className="flex flex-col ">
             <h3 className="flex-1 text-xl font-semibold">{title}</h3>
             {children}
           </div>
@@ -60,6 +62,22 @@ export default function ModalContent({
             "
             >
               GitHub
+            </a>
+          ) : null}
+
+          {link ? (
+            <a
+              href={link}
+              target="_blank"
+              className="relative text-white text-lg no-underline transition-colors duration-200 ease-in-out hover:text-[#775ada] 
+            after:absolute after:left-0 after:bottom-[-3px] 
+            after:w-0 after:h-[2px] after:bg-[#775ada] 
+            after:transition-all after:duration-300 
+            hover:after:w-full
+            cursor-pointer
+            "
+            >
+              Proyect Link
             </a>
           ) : null}
 

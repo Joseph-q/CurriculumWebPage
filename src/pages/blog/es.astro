@@ -5,31 +5,31 @@ import EsBlogLayout from "../../layouts/EsBlogLayout.astro";
 <EsBlogLayout>
     <h1 class="text-4xl font-bold mb-6">Courser Administrator</h1>
 
-    <p class="text-gray-100 text-lg border-l-4 border-blue-500 pl-4 italic">
+    <p class="text-gray-300 text-lg border-l-4 border-blue-500 pl-4 italic">
       📌 Una escuela de inglés enfrentaba serios problemas con el registro de asistencia de sus alumnos.
     </p>
 
-    <p class="text-gray-100 text-lg mt-4 border-l-4 border-red-500 pl-4 italic">
+    <p class="text-gray-300 text-lg mt-4 border-l-4 border-red-500 pl-4 italic">
       🚨 Los profesores perdían tiempo pasando lista manualmente, los alumnos olvidaban firmar su asistencia y, en muchas ocasiones, los registros eran inconsistentes.
     </p>
 
-    <p class="text-gray-100 text-lg mt-4 border-l-4 border-green-500 pl-4 italic">
+    <p class="text-gray-300 text-lg mt-4 border-l-4 border-green-500 pl-4 italic">
       💰 Esto no sería un gran inconveniente, si la asistencia no tuviera un impacto económico. Cada asistencia tenía un costo que se debería pagar por cada vez que se asistía.
     </p>
 
-    <p class="text-gray-200 text-lg mt-6">
+    <p class="text-gray-400 text-lg mt-6">
       Decidí desarrollar un sistema basado en <b>códigos QR encriptados</b>, permitiendo que cada alumno escaneara su código al llegar a clase y registrara automáticamente su asistencia en una base de datos <b>SQLite</b>.
     </p>
 
-    <p class="text-gray-200 text-lg mt-4">
+    <p class="text-gray-400 text-lg mt-4">
       Para el backend, opté por <b>Golang</b> debido a su eficiencia y velocidad, ya que el servidor se ejecutaría en un <b>Raspberry Pi</b>, donde era fundamental utilizar un lenguaje ligero y optimizado para el rendimiento.
     </p>
     
-    <p class="text-gray-200 text-lg mt-4">
+    <p class="text-gray-400 text-lg mt-4">
       En el frontend, elegí <b>Angular</b>, ya que era la tecnología con la que tenía más experiencia y contaba con componentes previamente desarrollados utilizando <b>Angular Material</b>, lo que agilizó el proceso de desarrollo y mejoró la interfaz del sistema.
     </p>
 
-    <p class="text-gray-200 text-lg mt-4">
+    <p class="text-gray-400 text-lg mt-4">
       Pero no todo fue sencillo. Se necesitaba garantizar la seguridad del sistema, evitando que los alumnos o maestros pudieran falsificar su asistencia. Para ello, implementé un mecanismo de <b>tokens únicos y encriptación</b> en los códigos QR, asegurando que cada registro fuera legítimo.
     </p>
 </EsBlogLayout>

@@ -5,31 +5,31 @@ import BlogLayout from "../../layouts/BlogLayout.astro";
 <BlogLayout>
     <h1 class="text-4xl font-bold mb-6">Course Administrator</h1>
 
-    <p class="text-gray-100 text-lg border-l-4 border-blue-500 pl-4 italic">
+    <p class="text-gray-300 text-lg border-l-4 border-blue-500 pl-4 italic">
       📌 An English school was facing serious problems with student attendance tracking.
     </p>
     
-    <p class="text-gray-100 text-lg mt-4 border-l-4 border-red-500 pl-4 italic">
+    <p class="text-gray-300 text-lg mt-4 border-l-4 border-red-500 pl-4 italic">
       🚨 Teachers were wasting time taking attendance manually, students would forget to sign in, and in many cases, records were inconsistent.
     </p>
     
-    <p class="text-gray-100 text-lg mt-4 border-l-4 border-green-500 pl-4 italic">
+    <p class="text-gray-300 text-lg mt-4 border-l-4 border-green-500 pl-4 italic">
       💰 This wouldn't be a major issue if attendance didn't have a financial impact. Each attendance had a cost that needed to be paid for every session attended.
     </p>
     
-    <p class="text-gray-200 text-lg mt-6">
+    <p class="text-gray-400 text-lg mt-6">
       I decided to develop a system based on <b>encrypted QR codes</b>, allowing each student to scan their code upon arrival and automatically register their attendance in an <b>SQLite</b> database.
     </p>
     
-    <p class="text-gray-200 text-lg mt-4">
+    <p class="text-gray-400 text-lg mt-4">
       For the backend, I chose <b>Golang</b> due to its efficiency and speed, as the server would run on a <b>Raspberry Pi</b>, where using a lightweight and performance-optimized language was essential.
     </p>
     
-    <p class="text-gray-200 text-lg mt-4">
+    <p class="text-gray-400 text-lg mt-4">
       On the frontend, I opted for <b>Angular</b> since it was the technology I was most experienced with and already had pre-developed components using <b>Angular Material</b>, which streamlined the development process and enhanced the system’s interface.
     </p>
     
-    <p class="text-gray-200 text-lg mt-4">
+    <p class="text-gray-400 text-lg mt-4">
       But it wasn't all easy. The system's security had to be ensured, preventing students or teachers from falsifying attendance. To achieve this, I implemented a <b>unique token and encryption</b> mechanism in the QR codes, ensuring each record was legitimate.
     </p>
     

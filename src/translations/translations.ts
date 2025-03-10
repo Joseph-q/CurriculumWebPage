@@ -41,7 +41,7 @@ const translations: Translations = {
     },
     Header: {
       title: "Backend Dev",
-      text: "Hey!  <b class='highlight'>I’m Joseph</b>. I mostly work as a backend developer, but I’ve got a soft spot for frontend too—I really enjoy dabbling in both worlds. Always up for exploring new things and learning along the way!",
+      text: "Hey! <b class='highlight'>I’m Joseph</b>. I primarily work as a backend developer, but I have a soft spot for frontend too—I enjoy dabbling in both worlds. Always eager to explore new things and learn along the way!",
       button: "Download CV!!",
     },
     Proyects: {
@@ -100,7 +100,7 @@ const translations: Translations = {
     },
     Header: {
       title: "Desarrollador Backend",
-      text: "¡Hola!  <b class='highlight'>Soy Joseph</b>. Principalmente trabajo como desarrollador backend, pero también tengo un gran interés por el frontend. Me encanta explorar ambos mundos y siempre estoy dispuesto a aprender cosas nuevas en el camino.",
+      text: "¡Hola!  <b class='highlight'>Soy Joseph</b>. Principalmente trabajo como desarrollador backend, pero también tengo un gran interés por el frontend. Me gusta explorar ambos mundos y siempre estoy dispuesto a aprender cosas nuevas en el camino.",
       button: "¡Descargar CV!",
     },
     Proyects: {

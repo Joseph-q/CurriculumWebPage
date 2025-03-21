@@ -72,7 +72,7 @@ const translations: Translations = {
         content: `
         <p class="mb-4">
     This project is a task management application developed in 
-    <span class="font-semibold text-red-500"> Angular 19</span>, which communicates with a 
+    <span class="font-semibold text-blue-500"> React</span>, which communicates with a 
     <span class="text-white"> Web API</span> in 
     <span class="font-semibold text-purple-600"> .NET</span>.
 </p>

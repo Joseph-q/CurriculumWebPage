@@ -6,107 +6,23 @@ const link = Astro.url.pathname.startsWith("/es") ? "/es/CV.pdf" : "/en/CV.pdf";
 const content = getContent(Astro.url.pathname);
 ---
 
-<div class="container" id="about">
+<div class="flex flex-col py-4 px-8 gap-y-8 xl:px-24 " id="about">
   <Navbar />
-  <div class="container-header">
-    <header class="header-content">
-      <div class="content-rigth">
-        <h1 class="content-title">{content.Header.title}</h1>
-        <p class="content-text" set:html={content.Header.text} />
+  <header class="flex flex-col md:flex-row gap-y-8 ">
+    <div class="flex-1">
+      <h1>{content.Header.title}</h1>
+      <p class="leading-snug mt-8 text-white/50" set:html={content.Header.text} />
 
-        <div class="content-action">
-          <a href={link} class="button-download highlight"
-            >{content.Header.button}</a
-          >
-        </div>
+      <div class="text-end mt-3">
+        <a href={link} class="button-download highlight"
+          >{content.Header.button}</a
+        >
       </div>
+    </div>
 
-      <div class="content-left">
-        <img class="content-image" src="/img/header-image.png" />
-      </div>
-    </header>
-  </div>
+    <div class="flex flex-1 justify-end">
+      <img  width="450" height="400" src="/img/header-image.png" />
+    </div>
+  </header>
 </div>
 
-<style>
-  .container {
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
-    padding: 1rem 2rem;
-  }
-
-  .container-header {
-    display: flex;
-    align-items: center;
-    height: 100%;
-  }
-
-  .header-content {
-    display: flex;
-  }
-  .content-rigth {
-    flex: 1;
-  }
-
-  .content-left {
-    display: flex;
-    justify-content: end;
-    flex: 1;
-  }
-  .content-image {
-    max-width: 450px;
-    max-height: 400px;
-  }
-
-  .content-text {
-    line-height: 1.2;
-    margin-top: 30px;
-    color: rgba(255, 255, 255, 0.5);
-  }
-
-  .content-action {
-    text-align: end;
-    flex: auto;
-  }
-
-  .button-download {
-    position: relative;
-    border: none;
-    cursor: pointer;
-    background: none;
-    color: white;
-    font-size: 1rem;
-    font-weight: 500;
-    font-family: inherit;
-    padding: 10px 20px; /* Añadido relleno de ejemplo */
-  }
-
-  @media (min-width: 1000px) {
-    .container {
-      padding: 1rem 7rem;
-    }
-  }
-
-  @media (max-width: 850px) {
-    .container-header {
-      align-items: unset;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .container {
-      padding: 1rem 2rem;
-    }
-
-    .header-content {
-      flex-direction: column;
-    }
-
-    .content-image {
-      display: flex;
-      width: 100%;
-      height: 80%;
-    }
-  }
-</style>

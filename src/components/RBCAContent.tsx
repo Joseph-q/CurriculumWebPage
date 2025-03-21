@@ -8,9 +8,11 @@ export default function RBCAContent() {
 
   return (
     <ModalContent
-      title="RBCA Api"
+      title="RBAC Api"
       cover="/svg/DbDiagram-RBCA.svg"
-      gitHublink="https://github.com/Joseph-q/RBCA"
+
+      links = {<a target="_blank" href="https://github.com/Joseph-q/RBAC" className="custom-link">GitHub</a>}
+
       badges={["Net.svg", "SqlServer.svg", "Csharp.svg"]}
     >
       <div dangerouslySetInnerHTML={{ __html: content }}></div>

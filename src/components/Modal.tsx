@@ -8,21 +8,18 @@ interface ModalProps {
 }
 
 export default function Modal({ isOpen, onClose, children }: ModalProps) {
-
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     }
     return () => {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     };
   }, [isOpen]);
 
-
   if (!isOpen) return null;
-
 
   return (
     <div
@@ -39,9 +36,7 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
         >
           &times;
         </button>
-        <div className="flex flex-col max-h-[80vh]  items-start gap-5 h-auto mt-10 md:mt-0 md:flex-row md:h-[70vh]">
-          {children}
-        </div>
+        {children}
       </div>
     </div>
   );

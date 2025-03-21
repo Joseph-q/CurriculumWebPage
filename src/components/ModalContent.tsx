@@ -4,28 +4,24 @@ import Badge from "./Badge";
 interface ModalProps {
   title: string;
   cover: string;
-  gitHublink?: string;
-  blogLink?: string;
   badges: string[];
   children: ComponentChildren;
-  link?: string;
+  links?:ComponentChildren;
 }
 
 export default function ModalContent({
   cover,
   badges,
-  gitHublink,
-  blogLink,
   title,
   children,
-  link,
+  links
 }: ModalProps) {
   const isVideo =
     cover.endsWith(".mp4") || cover.endsWith(".webm") || cover.endsWith(".mov");
 
   return (
-    <>
-      <div className="flex flex-1 max-w-lg flex-col justify-center">
+    <main className="flex flex-col gap-8 lg:flex-row">
+      <section className="flex-1 ">
         {isVideo ? (
           <video loop controls muted>
             <source src={cover} type="video/mp4" />
@@ -39,66 +35,20 @@ export default function ModalContent({
             <Badge url={"/svg/" + v} width="45" />
           ))}
         </div>
-      </div>
-      <div className="flex flex-1 flex-col justify-between h-[45vh] md:h-full">
-        <div className="overflow-y-auto h-full">
-          <div className="flex flex-col ">
-            <h3 className="flex-1 text-xl font-semibold">{title}</h3>
-            {children}
+      </section>
+      <section className="flex-1 flex flex-col justify-between">
+        <div>
+          <h2>{title}</h2>
+          <div className="max-h-[30vh] overflow-y-auto  xl:max-h-[80vh]">
+          {children}
           </div>
         </div>
 
-        <div className="flex w-full gap-10 justify-end">
-          {gitHublink ? (
-            <a
-              href={gitHublink}
-              target="_blank"
-              className="relative text-white text-lg no-underline transition-colors duration-200 ease-in-out hover:text-[#775ada] 
-            after:absolute after:left-0 after:bottom-[-3px] 
-            after:w-0 after:h-[2px] after:bg-[#775ada] 
-            after:transition-all after:duration-300 
-            hover:after:w-full
-            cursor-pointer
-            "
-            >
-              GitHub
-            </a>
-          ) : null}
-
-          {link ? (
-            <a
-              href={link}
-              target="_blank"
-              className="relative text-white text-lg no-underline transition-colors duration-200 ease-in-out hover:text-[#775ada] 
-            after:absolute after:left-0 after:bottom-[-3px] 
-            after:w-0 after:h-[2px] after:bg-[#775ada] 
-            after:transition-all after:duration-300 
-            hover:after:w-full
-            cursor-pointer
-            "
-            >
-              Proyect Link
-            </a>
-          ) : null}
-
-          {blogLink ? (
-            <a
-              href={blogLink}
-              className=" relative text-[#775ada] text-lg after:absolute 
-            after:bottom-[-3px] 
-            after:w-full
-            after:left-0
-            after:bg-[#775ada]
-            after:h-[2px]
-                        cursor-pointer
-
-            "
-            >
-              Leer más...
-            </a>
-          ) : null}
+        <div className="flex justify-end gap-8">
+          {links || null}
         </div>
-      </div>
-    </>
+
+      </section>
+    </main>
   );
 }

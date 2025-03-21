@@ -4,7 +4,7 @@ import { getContent } from "../translations/translations.ts";
 import Modal from "../components/Modal.tsx";
 import CourseContent from "../components/CourseContent.tsx";
 import RBCAContent from "../components/RBCAContent.tsx";
-import TaskAppContent from "../components/TaskAppContent.tsx";
+import TodoAppContent from "../components/TodoAppContent.tsx";
 
 export default function Portfolio() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,10 +27,10 @@ export default function Portfolio() {
 
         <div className="flex w-full items-center justify-evenly mt-2 flex-wrap gap-2">
           <Card
-            title="Task App (User-Tenancy)"
-            description=".NET, C#, SQL Server, Entity Framework, Angular, Azure"
-            url="/img/task-app.webp"
-            onClick={() => openModal(<TaskAppContent />)}
+            title="Todo APP (User-Tenancy)"
+            description=".NET, C#, SQL Server, Entity Framework, React, Azure"
+            url="/img/todo-app.webp"
+            onClick={() => openModal(<TodoAppContent />)}
           />
 
           <Card

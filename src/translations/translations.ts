@@ -152,7 +152,7 @@ const translations: Translations = {
       TaskAppContent: {
         content: `  <p class="mb-4">
             Este proyecto es una aplicación de gestión de tareas desarrollada en 
-            <span class="font-semibold text-red-500"> Angular 19</span>, que se comunica con una 
+            <span class="font-semibold text-blue-500"> React</span>, que se comunica con una 
             <span class="text-white"> Web API</span> en 
             <span class="font-semibold text-purple-600"> .NET</span>.
         </p>

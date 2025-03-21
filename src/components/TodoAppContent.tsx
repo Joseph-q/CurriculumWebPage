@@ -7,16 +7,22 @@ export default function TaskAppContent() {
   const content = getContent(pathname).Modal.TaskAppContent.content;
   return (
     <ModalContent
-      title="Task App (User-Tenancy)"
-      cover="/img/task-app.webp"
-      gitHublink="https://github.com/Joseph-q/TaskApp"
-      link="https://task-app-x8fp.vercel.app/"
+      title="Todo APP (User-Tenancy)"
+      cover="/img/todo-app.webp"
+
+      links={
+        <>
+        <a href="https://github.com/Joseph-q/TodoApp" target="_blank" className="custom-link">GitHub</a>
+        <a href="https://todo-app-seven-pink-62.vercel.app" target="_blank" className="important-link">Deployment</a>
+        </>
+      }
+
       badges={[
         "Microsoft_Azure.svg",
         "Net.svg",
         "SqlServer.svg",
         "Csharp.svg",
-        "Angular.svg",
+        "React.svg",
         "TypeScript.svg",
       ]}
     >

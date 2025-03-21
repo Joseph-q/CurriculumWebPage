@@ -5,7 +5,7 @@ export default function CourseContent() {
   const pathname =
     typeof window !== "undefined" ? window.location.pathname : "/";
 
-  const link = pathname.startsWith("/es") ? "/blog/es" : "/blog";
+  const linkref = pathname.startsWith("/es") ? "/blog/es" : "/blog";
 
   const content = getContent(pathname).Modal.CourseContent.content;
 
@@ -13,8 +13,14 @@ export default function CourseContent() {
     <ModalContent
       title="Courser Administrator"
       cover="/img/school-proyect.mp4"
-      blogLink={link}
-      gitHublink="https://github.com/Joseph-q/SchollFrontendApp"
+      links = {
+      <>
+      <a href="https://github.com/Joseph-q/SchollFrontendApp" target="_blank" className="custom-link">GitHub</a>
+      <a href={linkref} className="important-link">Leer Mas...</a>
+      </>
+      
+
+      }
       badges={[
         "Golang.svg",
         "Sqlite.svg",
